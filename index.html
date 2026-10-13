@@ -19,6 +19,31 @@
 
     * { box-sizing: border-box; }
 
+    .site-nav {
+      position: fixed;
+      z-index: 1;
+      top: 1.5rem;
+      left: 50%;
+      display: flex;
+      gap: .35rem;
+      padding: .4rem;
+      transform: translateX(-50%);
+      border: 1px solid #ffffff1c;
+      border-radius: 999px;
+      background: #ffffff0b;
+      backdrop-filter: blur(14px);
+    }
+
+    .site-nav a {
+      padding: .65rem 1rem;
+      border-radius: 999px;
+      color: #c4c4d5;
+      font-size: .88rem;
+      text-decoration: none;
+      transition: color 180ms ease, background 180ms ease;
+    }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: #fff; background: #ffffff16; }
+
     body {
       min-height: 100svh;
       margin: 0;
@@ -124,6 +149,11 @@
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   <main>
     <div class="sparkle" aria-hidden="true">✦</div>
     <p class="eyebrow">A tiny beginning</p>
